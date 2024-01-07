@@ -116,15 +116,22 @@ p {
 }
 .nav-list {
   display: none;
+  /* padding-top: 17.5px;
+  padding-bottom: 17.5px; */
 }
-.contacts {
+.nav {
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+}
+
+.contacts-list {
   display: none;
 }
 .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 17.5px 0 17.5px 0;
+  /* padding: 17.5px 0 17.5px 0; */
   flex-shrink: 0;
 }
 
@@ -144,8 +151,10 @@ p {
     align-items: flex-start;
     gap: 40px;
   }
-  .header-container {
-    padding: 0;
+  .nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    /* padding: 0; */
   }
   .navigation {
     color: #2e2f42;
@@ -160,6 +169,7 @@ p {
     align-items: center;
     margin-right: 121px;
   }
+
   .navigation:hover,
   .navigation:focus,
   .navigation:active {
@@ -195,15 +205,17 @@ p {
   }
 
   .contacts {
-    display: inline-flex;
+    /* display: inline-flex; */
   }
 
   .contacts-list {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
     flex-shrink: 0;
     font-style: normal;
-    gap: 12px;
+    gap: 10px;
   }
   .contacts-link {
     color: #434455;
@@ -217,6 +229,14 @@ p {
   }
 }
 @media screen and (min-width: 1158px) {
+  .header-container {
+    /* padding-left: 16px;
+    padding-right: 16px; */
+  }
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
   .logo {
     margin-right: 76px;
   }
@@ -455,7 +475,7 @@ p {
 }
 .section-three-text {
   text-align: center;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .section-three-item {
   background-color: #ffffff;
@@ -750,7 +770,7 @@ p {
   fill: #fff;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1157.99px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .container-footer {
     padding: 0 108px;
   }
@@ -760,9 +780,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 72px 24px;
+    text-align: left;
   }
   .footer-logo-p {
     max-width: 264px;
+    /* margin-bottom: 0px; */
   }
   .footer-form-box {
     max-width: 453px;
@@ -776,7 +798,7 @@ p {
   }
 }
 
-@media screen and (max-width: 767.99px) {
+@media screen and (max-width: 767px) {
   .footer {
     text-align: center;
   }
@@ -786,17 +808,19 @@ p {
 }
 
 @media screen and (min-width: 1158px) {
-  .footer {
+  /* .footer {
     padding: 100px 0;
-  }
+  } */
   .container-footer {
     gap: 0;
+    flex-wrap: nowrap;
+    padding: 0px 16px;
   }
   .footer-logo-p {
     margin-right: 120px;
   }
   .footer-social-box {
-    margin-right: auto;
+    margin-right: 80px;
   }
 }
 
